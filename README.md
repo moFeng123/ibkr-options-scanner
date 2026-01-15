@@ -10,7 +10,7 @@ See `SECURITY.md`.
 
 ## Features
 
-- **TWS/Gateway Connection**: Connect to IBKR TWS or IB Gateway via API
+- **TWS/Gateway Connection**: Connect to IBKR TWS or IB Gateway via `ib_async` (High-performance async client)
 - **Options Chain Display**: Professional T-shaped layout (Calls | Strike | Puts)
 - **Real-time Greeks**: Delta, Gamma, Theta, Vega, and Implied Volatility
 - **Smart Filtering**:
@@ -51,7 +51,7 @@ See `SECURITY.md`.
 
 - **Frontend**: React 18 + TypeScript + Vite + TailwindCSS
 - **Backend**: Python FastAPI + ib_async + SciPy
-- **API**: Interactive Brokers TWS API
+- **TWS Client**: `ib_async` (Third-party async wrapper for TWS API)
 
 ## Project Structure
 
