@@ -186,10 +186,10 @@ Open http://localhost:5173 in your browser.
 
 ### Delta Filter
 - **Call Options**: Delta ranges from 0 to 1 (input positive values)
-- **Put Options**: Delta ranges from -1 to 0 (input absolute values, e.g., 0.3~0.5 filters puts with delta -0.5~-0.3)
+- **Put Options**: Delta ranges from -1 to 0 (input absolute values, e.g., 0.3-0.5 filters puts with delta -0.5 to -0.3)
 
 ### Theta Filter
-- Input absolute values (e.g., 0.1~0.5 filters options with daily decay $0.10~$0.50)
+- Input absolute values (e.g., 0.1-0.5 filters options with daily decay $0.10-$0.50)
 
 ### IV Filter
 - Input percentage values (e.g., 20~50 for 20%~50% implied volatility)
