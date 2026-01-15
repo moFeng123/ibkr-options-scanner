@@ -31,8 +31,23 @@
 ## 技术栈
 
 - **前端**：React 18 + TypeScript + Vite + TailwindCSS
-- **后端**：Python FastAPI + ib_async
+- **后端**：Python FastAPI + ib_async + SciPy
 - **API**：盈透证券 TWS API
+
+## 项目结构
+
+```
+.
+├── backend/                 # FastAPI 后端
+│   ├── main.py             # 主程序逻辑
+│   └── requirements.txt    # Python 依赖
+├── frontend/                # React 前端
+│   ├── src/                # 源代码
+│   ├── package.json        # Node.js 依赖配置
+│   └── index.html          # 入口文件
+├── manage.py               # 项目管理脚本
+└── README.md               # 项目文档
+```
 
 ## 前置要求
 
@@ -75,17 +90,9 @@ python3 --version
   sudo apt install python3 python3-pip
   ```
 
-**推荐使用虚拟环境：**
-```bash
-# 创建虚拟环境
-python3 -m venv venv
+**环境管理：**
 
-# 激活虚拟环境
-# macOS/Linux:
-source venv/bin/activate
-# Windows:
-venv\Scripts\activate
-```
+我们强烈推荐使用 `uv` 来管理 Python 环境和依赖，它比标准 pip 快得多。具体设置步骤请见下文"安装步骤"。
 
 ### 3. Node.js 环境
 
@@ -115,10 +122,37 @@ git clone https://github.com/moFeng123/ibkr-options-scanner.git
 cd ibkr-options-scanner
 ```
 
-### 2. 安装后端依赖
+### 2. 配置 Python 环境与依赖
+
+建议使用 [uv](https://github.com/astral-sh/uv) 进行极速环境管理。
+
+**方案 A：使用 uv（推荐）**
+
+```bash
+# 1. 安装 uv (如未安装)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2. 进入后端目录
+cd backend
+
+# 3. 创建虚拟环境
+uv venv
+
+# 4. 激活环境
+source .venv/bin/activate  # macOS/Linux
+# .venv\Scripts\activate   # Windows
+
+# 5. 安装依赖
+uv pip install -r requirements.txt
+```
+
+**方案 B：使用标准 pip**
 
 ```bash
 cd backend
+python3 -m venv venv
+source venv/bin/activate   # macOS/Linux
+# venv\Scripts\activate    # Windows
 pip install -r requirements.txt
 ```
 

@@ -50,8 +50,23 @@ See `SECURITY.md`.
 ## Tech Stack
 
 - **Frontend**: React 18 + TypeScript + Vite + TailwindCSS
-- **Backend**: Python FastAPI + ib_async
+- **Backend**: Python FastAPI + ib_async + SciPy
 - **API**: Interactive Brokers TWS API
+
+## Project Structure
+
+```
+.
+├── backend/                 # FastAPI backend
+│   ├── main.py             # Main application logic
+│   └── requirements.txt    # Python dependencies
+├── frontend/                # React frontend
+│   ├── src/                # Source code
+│   ├── package.json        # Node.js dependencies
+│   └── index.html          # Entry point
+├── manage.py               # Management script
+└── README.md               # Documentation
+```
 
 ## Prerequisites
 
@@ -68,10 +83,37 @@ git clone https://github.com/moFeng123/ibkr-options-scanner.git
 cd ibkr-options-scanner
 ```
 
-### 2. Install backend dependencies
+### 2. Set up Python Environment
+
+We strongly recommend using [uv](https://github.com/astral-sh/uv) for faster dependency management.
+
+**Option 1: Using uv (Recommended)**
+
+```bash
+# 1. Install uv (if not installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2. Navigate to backend
+cd backend
+
+# 3. Create virtual environment
+uv venv
+
+# 4. Activate environment
+source .venv/bin/activate  # macOS/Linux
+# .venv\Scripts\activate   # Windows
+
+# 5. Install dependencies
+uv pip install -r requirements.txt
+```
+
+**Option 2: Using standard pip**
 
 ```bash
 cd backend
+python3 -m venv venv
+source venv/bin/activate   # macOS/Linux
+# venv\Scripts\activate    # Windows
 pip install -r requirements.txt
 ```
 
