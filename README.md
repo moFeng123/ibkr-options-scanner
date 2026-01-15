@@ -90,8 +90,12 @@ We strongly recommend using [uv](https://github.com/astral-sh/uv) for faster dep
 **Option 1: Using uv (Recommended)**
 
 ```bash
-# 1. Install uv (if not installed)
+# 1. Install uv
+# macOS/Linux:
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows:
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 # 2. Navigate to backend
 cd backend

@@ -129,8 +129,12 @@ cd ibkr-options-scanner
 **方案 A：使用 uv（推荐）**
 
 ```bash
-# 1. 安装 uv (如未安装)
+# 1. 安装 uv
+# macOS/Linux:
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows:
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 # 2. 进入后端目录
 cd backend
