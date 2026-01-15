@@ -10,7 +10,7 @@
 
 ## 功能特性
 
-- **TWS/Gateway 连接**：通过 `ib_async` 异步库连接盈透证券 TWS 或 IB Gateway
+- **TWS/Gateway 连接**：通过 [ib_async](https://github.com/ib-api-reloaded/ib_async) 异步库连接盈透证券 TWS 或 IB Gateway
 - **期权链显示**：专业的 T 型布局（看涨期权 | 行权价 | 看跌期权）
 - **实时 Greeks**：Delta、Gamma、Theta、Vega 和隐含波动率
 - **智能筛选**：
@@ -31,8 +31,8 @@
 ## 技术栈
 
 - **前端**：React 18 + TypeScript + Vite + TailwindCSS
-- **后端**：Python FastAPI + ib_async + SciPy
-- **TWS 客户端**：`ib_async` (第三方高性能异步 TWS API 封装库)
+- **后端**：Python FastAPI + [ib_async](https://github.com/ib-api-reloaded/ib_async) + SciPy
+- **TWS 客户端**：[ib_async](https://github.com/ib-api-reloaded/ib_async) (第三方高性能异步 TWS API 封装库)
 
 ## 项目结构
 
