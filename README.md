@@ -21,7 +21,7 @@ See `SECURITY.md`.
 - **Performance Optimizations**:
   - Fast mode (no Greeks) vs Greeks mode toggle
   - Black-Scholes based strike range estimation for Delta filtering
-  - Streaming vs Snapshot mode auto-switching
+
 - **User Experience**:
   - Weekly/Monthly expiration indicators
   - Recent symbols history
